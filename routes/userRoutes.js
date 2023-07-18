@@ -6,8 +6,8 @@ const {
   currentUser,
 } = require("../controllers/userController");
 
-router.route("/register").get(registerUser);
-router.route("/login").get(loginUser);
+router.route("/register").post(registerUser);
+router.route("/login").post(loginUser);
 router.route("/current").get(currentUser);
 
 module.exports = router;
