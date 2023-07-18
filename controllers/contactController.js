@@ -16,6 +16,12 @@ const createContact = (req, res) => {
   });
 };
 
+const getContact = (req, res) => {
+  res.status(201).json({
+    message: `Get contact for id : ${req.params.id}`,
+  });
+};
+
 //@desc Update  contact
 //@route GET /api/contacts/:id
 //@access public
@@ -37,6 +43,7 @@ const deleteContact = (req, res) => {
 module.exports = {
   getContacts,
   createContact,
+  getContact,
   updateContact,
   deleteContact,
 };
